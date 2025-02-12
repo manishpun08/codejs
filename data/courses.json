@@ -1,0 +1,59 @@
+[
+  {
+    "id": 2,
+    "slug": "javascript",
+    "name": "JavaScript/TypeScript",
+    "duration": "20 Days",
+    "shortDescription": "Master JavaScript and TypeScript to build scalable, interactive applications on both client and server sides.",
+    "image": "/images/typescript-javascript.jpg"
+  },
+  {
+    "id": 7,
+    "slug": "node/express",
+    "name": "Express With Node",
+    "duration": "1 month",
+    "shortDescription": "Master Express and Node.js to build fast, scalable server-side applications with robust routing, middleware support, and high-performance.",
+    "image": "/images/express.jpg"
+  },
+  {
+    "id": 3,
+    "slug": "mongo",
+    "name": "MongoDB",
+    "duration": "15 days",
+    "shortDescription": "Master MongoDB to efficiently store, manage, and scale data for modern applications with flexible, JSON-like document structures.",
+    "image": "/images/mongo.png"
+  },
+  {
+    "id": 4,
+    "slug": "react",
+    "name": "React/Next",
+    "duration": "1.5 months",
+    "shortDescription": "Master React and Next.js to build fast, scalable, and dynamic web applications with seamless server-side rendering and optimal performance.",
+    "image": "/images/react.jpg"
+  },
+  {
+    "id": 1,
+    "slug": "mern",
+    "name": "MERN Stack",
+    "duration": "3 Months",
+    "shortDescription": "Learn the full MERN stack, mastering both front-end and back-end to build dynamic, full-stack applications.",
+    "image": "/images/MERN.jpg"
+  },
+
+  {
+    "id": 99,
+    "slug": "nest",
+    "name": "Nest js",
+    "duration": "1 month",
+    "shortDescription": "Master NestJS to build efficient, scalable, and maintainable server-side applications using TypeScript.",
+    "image": "/images/nest.png"
+  },
+  {
+    "id": 299,
+    "slug": "html/css",
+    "name": "HTML and CSS",
+    "duration": "1 month",
+    "shortDescription": "Master HTML and CSS to create structured, responsive web pages, ensuring a solid foundation for building user-friendly websites.",
+    "image": "/images/html-css.jpg"
+  }
+]

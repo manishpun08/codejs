@@ -1,0 +1,59 @@
+{
+  "id": 1,
+  "slug": "javascript",
+  "name": "JavaScript/TypeScript",
+  "duration": "20 days",
+  "overview": "JavaScript (JS) is a versatile, high-level programming language primarily utilized for the creation of interactive and dynamic content on websites. Operating within the browser environment, JavaScript enables developers to manipulate web page elements, handle events, and interact with application programming interfaces (APIs). As one of the core technologies of the web, alongside HTML and CSS, JavaScript is indispensable for client-side scripting. TypeScript (TS), a superset of JavaScript, introduces static typing, thereby allowing developers to define types for variables, function parameters, and return values. This feature aids in identifying errors during the development process, significantly enhancing code quality and maintainability.",
+  "syllabus": [
+    {
+      "id": 1,
+      "title": "JavaScript Basics",
+      "contentList": [
+        "Introduction to JavaScript",
+        "Data Types in JavaScript",
+        "Understanding Variables and Constants",
+        "Operators and Expressions in JavaScript",
+        "JavaScript Scope and Context",
+        "Conditional Statements",
+        "Loops and Iterations"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Advanced JavaScript Concepts",
+      "contentList": [
+        "Functions and Function Expressions",
+        "Understanding Higher Order Functions",
+        "Working with Objects",
+        "Object Destructuring",
+        "Rest vs Spread Operator",
+        "Arrays and Array Methods",
+        "Array Destructuring",
+        "Common Array Methods: map, filter, find, reduce, etc."
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Asynchronous JavaScript",
+      "contentList": [
+        "Introduction to Asynchronous Programming",
+        "The Event Loop in JavaScript",
+        "Working with Promises",
+        "Error Handling in JavaScript",
+        "Understanding .then and .catch",
+        "Utilizing async/await for Asynchronous Code"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "TypeScript Fundamentals",
+      "contentList": [
+        "What is TypeScript?",
+        "The Importance of Type Safety in JavaScript",
+        "Interface vs Type in TypeScript",
+        "Introduction to Generics in TypeScript",
+        "Practical Examples Using TypeScript"
+      ]
+    }
+  ]
+}

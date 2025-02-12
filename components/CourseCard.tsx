@@ -1,24 +1,44 @@
+"use client";
 import React from "react";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface Props {
-  imageUrl: string;
-  title: string;
+  id: number;
+  name: string;
   duration: string;
-  subTitle: string;
+  shortDescription: string;
+  image: string;
+  slug: string;
 }
 
-const CourseCard = ({ imageUrl, title, duration, subTitle }: Props) => {
+const CourseCard = ({
+  slug,
+  name,
+  duration,
+  shortDescription,
+  image,
+}: Props) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(`/course-detail/${slug}`);
+  };
+
   return (
     <Box className="w-full max-w-[370px] mx-auto rounded-lg shadow-lg overflow-hidden group bg-white cursor-pointer transition-all duration-300 ease-in-out">
       {/* Image container with hover zoom */}
-      <Box className="relative overflow-hidden group-hover:scale-105 transition-transform duration-300 ease-in-out h-[190px]">
+      <Box
+        className="relative overflow-hidden group-hover:scale-105 transition-transform duration-300 ease-in-out h-[190px]"
+        onClick={handleClick}
+      >
         <Image
-          src={imageUrl}
-          height={350}
-          width={370}
-          alt="Course title"
+          src={image}
+          width={600}
+          height={400}
+          priority
+          alt={name}
           className="w-full object-cover"
         />
       </Box>
@@ -29,7 +49,7 @@ const CourseCard = ({ imageUrl, title, duration, subTitle }: Props) => {
           variant="h5"
           className="text-xl font-semibold text-gray-800"
         >
-          {title}
+          {name}
         </Typography>
 
         <Typography variant="h6" className="text-lg text-gray-600 mt-2">
@@ -39,16 +59,17 @@ const CourseCard = ({ imageUrl, title, duration, subTitle }: Props) => {
         {/* Subtext for course description */}
         <Typography
           variant="body1"
-          className="text-sm text-gray-600 mt-1 italic"
+          className="text-sm text-gray-600 mt-1 italic text-justify"
         >
-          {subTitle}
+          {shortDescription}
         </Typography>
 
         <Button
+          onClick={handleClick}
           variant="contained"
           className="mt-4 w-full bg-teal-600 text-white hover:bg-teal-700 transition-colors duration-200"
         >
-          Enroll Now
+          Explore
         </Button>
       </Stack>
     </Box>

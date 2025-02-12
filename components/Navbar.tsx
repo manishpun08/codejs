@@ -1,105 +1,40 @@
 "use client";
-import React, { useState } from "react";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  Button,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
-  Box,
-  useTheme,
-} from "@mui/material";
-import { Menu as MenuIcon } from "@mui/icons-material";
 
-const Navbar = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const theme = useTheme(); // To access the theme's colors
+import { Button, TextField } from "@mui/material";
+import { Search } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
-  // Handle drawer toggling for mobile screens
-  const toggleDrawer = () => {
-    setDrawerOpen(!drawerOpen);
-  };
+export default function Navbar() {
+  const [search, setSearch] = useState("");
 
   return (
-    <AppBar position="sticky" sx={{ background: "teal" }}>
-      <Toolbar sx={{ padding: "0 16px" }}>
-        {/* Logo or Brand Name */}
-        <Typography variant="h6" sx={{ flexGrow: 1, color: "white" }}>
-          MyBrand
-        </Typography>
+    <nav className="w-full p-4 bg-white shadow-md flex items-center justify-between md:justify-around flex-col md:flex-row gap-4 md:gap-0">
+      <Image priority src="/images/J.png" height={100} width={100} alt="Logo" />
 
-        {/* Desktop Menu */}
-        <Box sx={{ display: { xs: "none", md: "flex" } }}>
-          <Button
-            sx={{
-              color: "white",
-              "&:hover": { backgroundColor: theme.palette.secondary.light },
-            }}
-          >
-            Home
-          </Button>
-          <Button
-            sx={{
-              color: "white",
-              "&:hover": { backgroundColor: theme.palette.secondary.light },
-            }}
-          >
-            About
-          </Button>
-          <Button
-            sx={{
-              color: "white",
-              "&:hover": { backgroundColor: theme.palette.secondary.light },
-            }}
-          >
-            Services
-          </Button>
-          <Button
-            sx={{
-              color: "white",
-              "&:hover": { backgroundColor: theme.palette.secondary.light },
-            }}
-          >
-            Contact
-          </Button>
-        </Box>
+      <div className="relative w-full md:w-1/3">
+        <Search
+          className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500"
+          size={18}
+        />
+        <TextField
+          type="text"
+          placeholder="Search..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="pl-8 pr-4 py-2 w-full border rounded-lg"
+        />
+      </div>
 
-        {/* Mobile Menu Icon */}
-        <IconButton
-          size="large"
-          edge="end"
-          color="inherit"
-          aria-label="menu"
-          onClick={toggleDrawer}
-          sx={{ display: { xs: "flex", md: "none" } }}
-        >
-          <MenuIcon />
-        </IconButton>
-      </Toolbar>
-
-      {/* Mobile Drawer */}
-      <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer}>
-        <List sx={{ width: 250 }}>
-          <ListItem component="li" onClick={toggleDrawer}>
-            <ListItemText primary="Home" />
-          </ListItem>
-          <ListItem component="li" onClick={toggleDrawer}>
-            <ListItemText primary="About" />
-          </ListItem>
-          <ListItem component="li" onClick={toggleDrawer}>
-            <ListItemText primary="Services" />
-          </ListItem>
-          <ListItem component="li" onClick={toggleDrawer}>
-            <ListItemText primary="Contact" />
-          </ListItem>
-        </List>
-      </Drawer>
-    </AppBar>
+      <Button
+        variant="contained"
+        sx={{
+          background: "teal",
+        }}
+        className="w-full md:w-auto"
+      >
+        Send Enquiry
+      </Button>
+    </nav>
   );
-};
-
-export default Navbar;
+}

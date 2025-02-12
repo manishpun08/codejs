@@ -1,0 +1,84 @@
+{
+  "id": 2,
+  "slug": "mern",
+  "name": "MERN Stack Course",
+  "duration": "3 months",
+  "overview": "The MERN stack is a popular set of technologies for building full-stack web applications using JavaScript. It consists of four components: MongoDB, Express.js, React.js, and Node.js. MongoDB is a NoSQL database that stores data in a flexible JSON format, making it scalable and ideal for modern applications. Express.js is a backend framework for Node.js, handling HTTP requests and routing. Node.js allows JavaScript to run on the server side, enabling full-stack JavaScript development. React.js, a front-end library by Facebook, builds interactive user interfaces with reusable components. Together, these technologies allow developers to use a single language (JavaScript) across the entire application, streamlining development.",
+  "syllabus": [
+    {
+      "id": 1,
+      "title": "Introduction to MERN Stack",
+      "contentList": [
+        "Overview of Modern Web Development",
+        "Understanding the MERN Stack",
+        "Exploring the Scope and Potential of MERN",
+        "Installing and Setting Up VS Code",
+        "Installing Node.js"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "JavaScript Basics",
+      "contentList": [
+        "Introduction to JavaScript",
+        "Data Types in JavaScript",
+        "Understanding Variables and Constants",
+        "Operators and Expressions in JavaScript",
+        "JavaScript Scope and Context",
+        "Conditional Statements",
+        "Loops and Iterations"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Advanced JavaScript Concepts",
+      "contentList": [
+        "Functions and Function Expressions",
+        "Understanding Higher Order Functions",
+        "Working with Objects",
+        "Object Destructuring",
+        "Rest vs Spread Operator",
+        "Arrays and Array Methods",
+        "Array Destructuring",
+        "Common Array Methods: map, filter, find, reduce, etc."
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Asynchronous JavaScript",
+      "contentList": [
+        "Introduction to Asynchronous Programming",
+        "The Event Loop in JavaScript",
+        "Working with Promises",
+        "Error Handling in JavaScript",
+        "Understanding .then and .catch",
+        "Using async/await for Asynchronous Code"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "TypeScript Fundamentals",
+      "contentList": [
+        "What is TypeScript?",
+        "The Importance of Type Safety in JavaScript",
+        "Interface vs Type in TypeScript",
+        "Introduction to Generics in TypeScript",
+        "Practical Examples Using TypeScript"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Introduction to Node.js",
+      "contentList": [
+        "What is Node.js and Why Use It?",
+        "Node.js as a JavaScript Runtime",
+        "Built-in Modules in Node.js",
+        "Understanding npm (Node Package Manager)",
+        "Navigating the npm Repository",
+        "Importing and Exporting Modules",
+        "Installing Third-party Packages",
+        "Creating a New Node.js Project"
+      ]
+    }
+  ]
+}
