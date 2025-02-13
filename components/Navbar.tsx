@@ -23,9 +23,7 @@ export default function Navbar() {
   return (
     <nav
       className={`w-full fixed top-0 z-10 border-b transition-all duration-500 ease-in-out flex flex-col md:flex-row items-center justify-between px-4 md:px-10 ${
-        scrolled
-          ? 'bg-black text-white shadow-md py-2'
-          : 'bg-white text-black py-4'
+        scrolled ? 'bg-white  shadow-md py-2' : 'bg-white  py-4'
       }`}
     >
       {/* Logo */}
@@ -41,7 +39,7 @@ export default function Navbar() {
       </div>
 
       {/* Search Bar */}
-      <div className=" w-full md:w-1/3 mb-4 md:mb-0">
+      <div className="w-full md:w-1/3 mb-4 md:mb-0">
         <SearchBar />
       </div>
 
