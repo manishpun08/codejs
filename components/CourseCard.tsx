@@ -1,8 +1,10 @@
-"use client";
-import React from "react";
-import { Box, Button, Stack, Typography } from "@mui/material";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
+'use client';
+import React from 'react';
+import { Box, Button, Stack, Typography } from '@mui/material';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { LuCalendarDays } from 'react-icons/lu';
+import { FaArrowRightLong } from 'react-icons/fa6';
 
 interface Props {
   id: number;
@@ -27,10 +29,15 @@ const CourseCard = ({
   };
 
   return (
-    <Box className="w-full max-w-[370px] mx-auto rounded-lg shadow-lg overflow-hidden group bg-white cursor-pointer transition-all duration-300 ease-in-out">
+    <Box
+      className="w-full max-w-[370px] mx-auto rounded-3xl shadow-lg overflow-hidden group p-4 cursor-pointer transition-all duration-300 ease-in-out"
+      sx={{
+        background: 'linear-gradient(180deg, #C5E3FF 0%, #FFEDED 95%)',
+      }}
+    >
       {/* Image container with hover zoom */}
       <Box
-        className="relative overflow-hidden group-hover:scale-105 transition-transform duration-300 ease-in-out h-[190px]"
+        className="relative overflow-hidden group-hover:scale-105 transition-transform duration-300 ease-in-out "
         onClick={handleClick}
       >
         <Image
@@ -39,37 +46,41 @@ const CourseCard = ({
           height={400}
           priority
           alt={name}
-          className="w-full object-cover"
+          className="w-full object-cover rounded-lg "
         />
       </Box>
 
       {/* Card content */}
-      <Stack className="p-4">
+      <Stack className="pt-4">
         <Typography
           variant="h5"
-          className="text-xl font-semibold text-gray-800"
+          className="text-xl font-semibold text-gray-800 "
         >
           {name}
         </Typography>
 
-        <Typography variant="h6" className="text-lg text-gray-600 mt-2">
-          Duration: <span className="text-teal-800">{duration}</span>
+        <Typography
+          variant="h6"
+          className="text-lg text-gray-600 flex items-center py-1"
+        >
+          <LuCalendarDays className="mr-1 mt-[-3px]" />
+          <span>
+            Duration: <span className="font-bold">{duration}</span>
+          </span>
         </Typography>
 
         {/* Subtext for course description */}
-        <Typography
-          variant="body1"
-          className="text-sm text-gray-600 mt-1 italic text-justify"
-        >
+        <Typography className="text-sm text-gray-600  min-h-[90px] font-sans">
           {shortDescription}
         </Typography>
 
         <Button
           onClick={handleClick}
           variant="contained"
-          className="mt-4 w-full bg-teal-600 text-white hover:bg-teal-700 transition-colors duration-200"
+          className="mt-4 w-full bg-teal-600 text-white hover:bg-teal-500 hover:drop-shadow-md transition duration-300 ease-in-out rounded-full items-center text-center  "
         >
           Explore
+          <FaArrowRightLong className="text-xl ml-2 mb-[3px]" />
         </Button>
       </Stack>
     </Box>
