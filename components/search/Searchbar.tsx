@@ -17,13 +17,8 @@ const SearchBar = () => {
               <SearchIcon />
             </InputAdornment>
           }
-          sx={{
-            backgroundColor: '#fff',
-            borderRadius: '14px',
-            height: '4rem',
-            width: '500px',
-          }}
           placeholder="Search Courses..."
+          className="bg-white rounded-2xl lg:w-[500px] h-16"
         />
       </FormControl>
     </div>

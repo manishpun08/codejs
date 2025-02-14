@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <HomeHero />
       {/* <HomeCarousel /> */}
-      <Box className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-6 sm:px-10 lg:px-16 xl:px-24 py-10">
+      <Box className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-4 lg:px-6 xl:mx-8 py-10">
         {courses.map((item) => {
           return <CourseCard key={item.id} {...item} />;
         })}

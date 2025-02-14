@@ -35,7 +35,7 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <div className="bg-secondary-800 mt-4">
+    <div className="bg-secondary-800 mt-4 lg:px-6">
       <div className="container max-w-8xl px-4 sm:px-6 lg:px-8">
         {/* Footer top */}
         <div className="flex flex-col md:flex-row justify-between py-12 space-y-8 md:space-y-0">
