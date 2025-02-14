@@ -35,13 +35,13 @@ const CourseHero: React.FC<CourseHeroProps> = ({ CourseDetail }) => {
         homeElement={'Home'}
         separator="/"
         activeClasses="text-primary-400"
-        containerClasses="flex container mx-auto py-4"
+        containerClasses="flex container mx-auto py-4 px-4"
         listClasses="hover:underline mx-1 "
         capitalizeLinks
       />
       <div className="container mx-auto px-4 flex flex-wrap items-center justify-center">
-        <div className=" lg:mb-0 lg:w-1/2 text-white">
-          <h1 className="max-w-xl text-[2.9rem] leading-none font-extrabold font-sans text-center lg:text-5xl lg:text-left lg:leading-tight ">
+        <div className="mb-5 lg:mb-0 lg:w-1/2 text-white">
+          <h1 className="max-w-xl text-2xl lg:text-[2.9rem] leading-none font-extrabold font-sans lg:text-5xl lg:text-left lg:leading-tight ">
             {CourseDetail.name}
           </h1>
           <h2 className="max-w-xl text-center lg:text-left lg:max-w-md flex items-center py-1">
@@ -61,7 +61,7 @@ const CourseHero: React.FC<CourseHeroProps> = ({ CourseDetail }) => {
             </Button>
           </div>
         </div>
-        <div className="lg:w-1/2 md:py-10">
+        <div className="lg:w-1/2 py-4 md:py-10">
           <Image
             src="/images/typescript-javascript.jpg"
             alt="hero-img"
