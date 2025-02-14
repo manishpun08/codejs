@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import React from 'react';
 import { FaArrowRightLong } from 'react-icons/fa6';
 
-const Hero = () => {
+const HomeHero = () => {
   const router = useRouter();
 
   return (
@@ -42,4 +42,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HomeHero;

@@ -46,7 +46,7 @@ const CourseCard = ({
           height={400}
           priority
           alt={name}
-          className="w-full object-cover rounded-lg "
+          className="w-full rounded-lg aspect-3/2 object-cover"
         />
       </Box>
 

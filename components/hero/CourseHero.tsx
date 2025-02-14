@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import React from 'react';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { LuCalendarDays } from 'react-icons/lu';
-import Breadcrumb from './Breadcrumb';
+import Breadcrumb from '../Breadcrumb';
 
 interface CourseHeroProps {
   CourseDetail: {

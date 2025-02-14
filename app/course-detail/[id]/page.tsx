@@ -1,9 +1,9 @@
 import { Typography } from '@mui/material';
-import CourseOverView from '@/components/CourseOverView';
-import CourseSyllabus from '@/components/CourseSyllabus';
+import CourseOverView from '@/components/CourseDetail/CourseOverView';
+import CourseSyllabus from '@/components/CourseDetail/CourseSyllabus';
 import getCourseDetails from '@/data/courseDetails';
-import CourseHero from '@/components/CourseHero';
-import ClassCard from '@/components/ClassCard';
+import CourseHero from '@/components/hero/CourseHero';
+import ClassCard from '@/components/cards/ClassCard';
 import Contact from '@/app/contact/page';
 interface CourseDetail {
   id: number;
