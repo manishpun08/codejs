@@ -25,10 +25,10 @@ export default function Header() {
   return (
     <>
       <nav
-        className={`w-full fixed top-0 z-10 border-b transition-all duration-500 ease-in-out flex flex-col md:flex-row items-center justify-between px-4 md:px-8 ${
+        className={`w-full fixed top-0 z-10 border-b transition-all duration-500 ease-in-out flex flex-col md:flex-row items-center align-middle justify-between px-4 lg:px-8 ${
           scrolled
             ? 'bg-secondary-700 shadow-md border-none py-2'
-            : 'bg-secondary-200 py-3'
+            : 'bg-secondary-300 py-3'
         }`}
       >
         {/* Logo */}
@@ -43,20 +43,18 @@ export default function Header() {
           />
         </Link>
 
-        <CourseMenu />
-
         {/* Search Bar */}
-        <div className="w-full md:w-1/2 my-4 md:mb-0">
+        <div className="w-full items-center align-middle flex lg:flex-row flex-col gap-4 md:w-1/2 my-4 md:my-0">
+          <CourseMenu />
           <SearchBar />
         </div>
 
         {/* CTA Button */}
         <Button
-          variant="contained"
           onClick={() => router.push('/contact')}
-          className="w-[180px] py-3 lg:py-4 lg:px-5 lg:w-auto rounded-xl bg-primary-600 hover:bg-primary-500 hover:drop-shadow-md transition duration-300 ease-in-out"
+          className="w-[180px] py-3 lg:py-4 lg:px-5 lg:w-auto rounded-xl bg-primary-600 hover:bg-primary-500 hover:drop-shadow-md transition duration-300 ease-in-out text-white text-center"
         >
-          Send Enquiry <FaArrowRightLong className="text-lg ml-2 mb-1" />
+          Send Enquiry <FaArrowRightLong className="text-lg ml-2 mb-[2px]" />
         </Button>
       </nav>
 

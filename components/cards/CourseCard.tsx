@@ -80,7 +80,7 @@ const CourseCard = ({
           className="mt-4 w-full bg-primary-600 text-white hover:bg-primary-500 hover:drop-shadow-md transition duration-300 ease-in-out rounded-full items-center text-center  "
         >
           Explore
-          <FaArrowRightLong className="text-xl ml-2 mb-[3px]" />
+          <FaArrowRightLong className="text-sm ml-2 mb-[2px]" />
         </Button>
       </Stack>
     </Box>

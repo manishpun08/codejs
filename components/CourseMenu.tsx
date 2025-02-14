@@ -19,22 +19,17 @@ const CourseMenu: React.FC = () => {
   };
 
   return (
-    <div
-      onMouseEnter={handleHoverOpen}
-      onMouseLeave={handleHoverClose}
-      style={{ display: 'inline-block' }}
-    >
+    <div onMouseEnter={handleHoverOpen} onMouseLeave={handleHoverClose}>
       <Button
         id="course-button"
         aria-controls={open ? 'course-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
-        variant="contained"
         startIcon={<MenuIcon />}
         endIcon={<KeyboardArrowDownIcon />}
-        className="w-[180px] py-3 lg:py-4 lg:px-5 lg:w-auto rounded-xl bg-primary-600"
+        className=" py-3 lg:py-4 lg:px-2  lg:w-auto bg-secondary-700 items-center align-middle text-white"
       >
-        All Course
+        Courses
       </Button>
       <Menu
         id="course-menu"

@@ -53,11 +53,10 @@ const CourseHero: React.FC<CourseHeroProps> = ({ CourseDetail }) => {
           </h2>
           <div className="flex justify-center lg:justify-start mt-4">
             <Button
-              variant="contained"
               onClick={() => router.push('/contact')}
-              className="w-[180px] py-3 md:py-4 md:px-5 md:w-auto rounded-xl bg-primary-600 hover:bg-primary-500 hover:drop-shadow-md transition duration-300 ease-in-out"
+              className="w-[180px] py-3 md:py-4 md:px-5 md:w-auto rounded-xl bg-primary-600 hover:bg-primary-500 hover:drop-shadow-md transition duration-300 ease-in-out text-white"
             >
-              Enroll Now <FaArrowRightLong className="text-lg ml-2 mb-1" />
+              Enroll Now <FaArrowRightLong className="text-lg ml-2 mb-[2px]" />
             </Button>
           </div>
         </div>
