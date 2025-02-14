@@ -25,7 +25,7 @@ const CourseCard = ({
   const router = useRouter();
 
   const handleClick = () => {
-    router.push(`/course-detail/${slug}`);
+    router.push(`/courses/${slug}`);
   };
 
   return (
@@ -76,7 +76,6 @@ const CourseCard = ({
 
         <Button
           onClick={handleClick}
-          variant="contained"
           className="mt-4 w-full bg-primary-600 text-white hover:bg-primary-500 hover:drop-shadow-md transition duration-300 ease-in-out rounded-full items-center text-center  "
         >
           Explore

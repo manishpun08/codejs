@@ -46,7 +46,7 @@ export default function Header() {
         {/* Search Bar */}
         <div className="w-full items-center align-middle flex lg:flex-row flex-col gap-4 md:w-1/2 my-4 md:my-0">
           <CourseMenu />
-          <SearchBar route="/" />
+          <SearchBar route="/courses" />
         </div>
 
         {/* CTA Button */}

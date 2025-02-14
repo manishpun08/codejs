@@ -17,11 +17,11 @@ export const courses = [
 ];
 
 export const coursesList = [
-  { id: 1, name: 'MERN', link: '/course-detail/mern' },
-  { id: 2, name: 'JavaScript', link: '/course-detail/javascript' },
-  { id: 3, name: 'React', link: '/course-detail/react' },
-  { id: 4, name: 'Nest', link: '/course-detail/nest' },
-  { id: 5, name: 'HTML & CSS', link: '/course-detail/html-css' },
-  { id: 6, name: 'Express', link: '/course-detail/express' },
-  { id: 7, name: 'MongoDB', link: '/course-detail/mongodb' },
+  { id: 1, name: 'MERN', link: '/courses/mern' },
+  { id: 2, name: 'JavaScript', link: '/courses/javascript' },
+  { id: 3, name: 'React', link: '/courses/react' },
+  { id: 4, name: 'Nest', link: '/courses/nest' },
+  { id: 5, name: 'HTML & CSS', link: '/courses/html-css' },
+  { id: 6, name: 'Express', link: '/courses/express' },
+  { id: 7, name: 'MongoDB', link: '/courses/mongodb' },
 ];

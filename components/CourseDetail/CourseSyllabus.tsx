@@ -1,4 +1,4 @@
-import { Syllabus } from '@/app/course-detail/[id]/page';
+import { Syllabus } from '@/app/courses/[id]/page';
 import SyllabusSection from './SyllabusSection';
 
 const CourseSyllabus = ({ syllabus }: { syllabus: Syllabus[] }) => {
