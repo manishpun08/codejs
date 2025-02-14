@@ -1,8 +1,10 @@
-import { Button, Container, Typography } from "@mui/material";
-import CourseOverView from "@/components/CourseOverView";
-import CourseSyllabus from "@/components/CourseSyllabus";
-import getCourseDetails from "@/data/courseDetails";
-
+import { Typography } from '@mui/material';
+import CourseOverView from '@/components/CourseOverView';
+import CourseSyllabus from '@/components/CourseSyllabus';
+import getCourseDetails from '@/data/courseDetails';
+import CourseHero from '@/components/CourseHero';
+import ClassCard from '@/components/ClassCard';
+import Contact from '@/app/contact/page';
 interface CourseDetail {
   id: number;
   slug: string;
@@ -29,44 +31,22 @@ const CourseDetailPage = async ({ params }: { params: { id: string } }) => {
   }
 
   return (
-    <Container
-      sx={{
-        padding: "40px 20px",
-        borderRadius: "20px",
-      }}
-      className="max-w-7xl mx-auto bg-white shadow-xl rounded-lg"
-    >
-      <div className="text-center mb-8">
-        <Typography
-          variant="h4"
-          sx={{
-            fontWeight: "bold",
-            color: "#FF6F00",
-            fontSize: { xs: "2rem", sm: "3rem", md: "3.5rem" },
-            letterSpacing: "1px",
-            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
-          }}
-          className="text-orange-600"
-        >
-          {data.name}
-        </Typography>
+    <>
+      <CourseHero CourseDetail={data} />
+      <div className="px-4 md:px-14 w-full flex flex-col md:flex-row gap-6">
+        {/* Left Section: Course Overview & Syllabus */}
+        <div className="w-full md:w-2/3">
+          <CourseOverView overView={data.overview} />
+          <CourseSyllabus syllabus={data.syllabus} />
+        </div>
 
-        <Button
-          className="bg-blue-400"
-          variant="contained"
-          disableElevation
-          disableFocusRipple
-          sx={{ cursor: "default", fontSize: "1rem" }}
-        >
-          {data.duration}
-        </Button>
+        {/* Right Section: ClassCard */}
+        <div className="w-full md:w-1/3 md:mt-14">
+          <ClassCard />
+          <Contact />
+        </div>
       </div>
-
-      <div className="space-y-8">
-        <CourseOverView overView={data.overview} />
-        <CourseSyllabus syllabus={data.syllabus} />
-      </div>
-    </Container>
+    </>
   );
 };
 

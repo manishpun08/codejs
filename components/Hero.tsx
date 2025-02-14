@@ -23,7 +23,7 @@ const Hero = () => {
           <Button
             variant="contained"
             onClick={() => router.push('/contact')}
-            className="w-[180px] py-3 md:py-4 md:px-5 md:w-auto rounded-xl bg-teal-600 hover:bg-teal-500 hover:drop-shadow-md transition duration-300 ease-in-out"
+            className="w-[180px] py-3 md:py-4 md:px-5 md:w-auto rounded-xl bg-primary-600 hover:bg-primary-500 hover:drop-shadow-md transition duration-300 ease-in-out"
           >
             Learn More <FaArrowRightLong className="text-lg ml-2 mb-1" />
           </Button>

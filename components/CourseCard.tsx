@@ -70,14 +70,14 @@ const CourseCard = ({
         </Typography>
 
         {/* Subtext for course description */}
-        <Typography className="text-sm text-gray-600  min-h-[90px] font-sans">
+        <Typography className="text-sm text-gray-600  line-clamp-3  font-sans">
           {shortDescription}
         </Typography>
 
         <Button
           onClick={handleClick}
           variant="contained"
-          className="mt-4 w-full bg-teal-600 text-white hover:bg-teal-500 hover:drop-shadow-md transition duration-300 ease-in-out rounded-full items-center text-center  "
+          className="mt-4 w-full bg-primary-600 text-white hover:bg-primary-500 hover:drop-shadow-md transition duration-300 ease-in-out rounded-full items-center text-center  "
         >
           Explore
           <FaArrowRightLong className="text-xl ml-2 mb-[3px]" />
