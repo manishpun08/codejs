@@ -4,7 +4,8 @@ import CourseSyllabus from '@/components/CourseDetail/CourseSyllabus';
 import getCourseDetails from '@/data/courseDetails';
 import CourseHero from '@/components/hero/CourseHero';
 import ClassCard from '@/components/cards/ClassCard';
-import Contact from '@/app/contact/page';
+import { Suspense } from 'react';
+
 interface CourseDetail {
   id: number;
   slug: string;
@@ -21,7 +22,11 @@ export interface Syllabus {
 }
 
 // Your page component, which now fetches data directly
-const CourseDetailPage = async ({ params }: { params: { id: string } }) => {
+const CourseDetailPage = async ({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) => {
   const { id } = await params;
 
   const data: CourseDetail | null = getCourseDetails(id);
@@ -32,20 +37,21 @@ const CourseDetailPage = async ({ params }: { params: { id: string } }) => {
 
   return (
     <>
-      <CourseHero CourseDetail={data} />
-      <div className="px-4 md:px-14 w-full flex flex-col md:flex-row gap-6">
-        {/* Left Section: Course Overview & Syllabus */}
-        <div className="w-full md:w-2/3">
-          <CourseOverView overView={data.overview} />
-          <CourseSyllabus syllabus={data.syllabus} />
-        </div>
+      <Suspense>
+        <CourseHero CourseDetail={data} />
+        <div className="px-4 md:px-14 w-full flex flex-col md:flex-row gap-6">
+          {/* Left Section: Course Overview & Syllabus */}
+          <div className="w-full md:w-2/3">
+            <CourseOverView overView={data.overview} />
+            <CourseSyllabus syllabus={data.syllabus} />
+          </div>
 
-        {/* Right Section: ClassCard */}
-        <div className="w-full md:w-1/3 md:mt-14">
-          <ClassCard />
-          <Contact />
+          {/* Right Section: ClassCard */}
+          <div className="w-full md:w-1/3 md:mt-14">
+            <ClassCard />
+          </div>
         </div>
-      </div>
+      </Suspense>
     </>
   );
 };

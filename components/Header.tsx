@@ -5,7 +5,7 @@ import Image from 'next/image';
 import SearchBar from './search/Searchbar';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { useRouter } from 'next/navigation';
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, Suspense } from 'react';
 import Link from 'next/link';
 import CourseMenu from './CourseMenu';
 
@@ -23,7 +23,7 @@ export default function Header() {
   }, [checkScrollPosition]);
 
   return (
-    <>
+    <Suspense>
       <nav
         className={`w-full fixed top-0 z-10 border-b border-secondary-50 transition-all duration-500 ease-in-out flex flex-col md:flex-row items-center align-middle justify-between px-4 lg:px-8 ${
           scrolled
@@ -46,7 +46,7 @@ export default function Header() {
         {/* Search Bar */}
         <div className="w-full items-center align-middle flex lg:flex-row flex-col gap-4 md:w-1/2 my-4 md:my-0">
           <CourseMenu />
-          <SearchBar route="/courses" />
+          <SearchBar />
         </div>
 
         {/* CTA Button */}
@@ -60,6 +60,6 @@ export default function Header() {
 
       {/* Spacer to push content down */}
       <div className="h-[320px] md:h-[125px]" />
-    </>
+    </Suspense>
   );
 }
