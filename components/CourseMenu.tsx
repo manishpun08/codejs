@@ -50,7 +50,7 @@ const CourseMenu: React.FC = () => {
             key={course.id}
             component="a"
             href={course.link}
-            className="w-[230px] hover:bg-primary-300 hover:text-white transition-all duration-300 ease-in-out"
+            className="w-[230px] hover:bg-secondary-400 hover:text-white transition-all duration-300 ease-in-out"
             onClick={handleHoverClose}
           >
             <div className="py-2 capitalize">{course.name}</div>
