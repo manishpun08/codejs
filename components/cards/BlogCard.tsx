@@ -3,24 +3,23 @@ import React from 'react';
 import { Box, Button, Stack, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { LuCalendarDays } from 'react-icons/lu';
 import { FaArrowRightLong } from 'react-icons/fa6';
 
 interface Props {
   id: number;
   name: string;
-  duration?: string;
-  shortDescription?: string;
+  shortDescription: string;
   image: string;
   slug: string;
+  whyThisCourse: string;
 }
 
-const CourseCard = ({
+const BlogCard = ({
   slug,
   name,
-  duration,
   shortDescription,
   image,
+  whyThisCourse,
 }: Props) => {
   const router = useRouter();
 
@@ -30,7 +29,7 @@ const CourseCard = ({
 
   return (
     <Box
-      className="w-full max-w-[370px] mx-auto rounded-3xl shadow-lg overflow-hidden group p-4 cursor-pointer transition-all duration-300 ease-in-out"
+      className="w-full max-w-[370px] mx-auto rounded-3xl shadow-lg overflow-hidden group p-6 cursor-pointer transition-all duration-300 ease-in-out"
       sx={{
         background: 'linear-gradient(180deg, #C5E3FF 0%, #FFEDED 95%)',
       }}
@@ -58,35 +57,26 @@ const CourseCard = ({
         >
           {name}
         </Typography>
-        {/* duration */}
-
-        <Typography
-          variant="h6"
-          className="text-lg text-gray-600 flex items-center py-1"
-        >
-          <LuCalendarDays className="mr-1 mt-[-3px]" />
-          <span>
-            Duration: <span className="font-bold">{duration}</span>
-          </span>
-        </Typography>
 
         {/* Subtext for course description */}
         <Typography className="text-sm text-gray-600  line-clamp-3  font-sans">
           {shortDescription}
         </Typography>
 
-        {shortDescription && (
-          <Button
-            onClick={handleClick}
-            className="mt-4 w-full bg-primary-600 text-white hover:bg-primary-500 hover:drop-shadow-md transition duration-300 ease-in-out rounded-full items-center text-center  "
-          >
-            Explore
-            <FaArrowRightLong className="text-sm ml-2 mb-[2px]" />
-          </Button>
-        )}
+        <Typography className="text-sm text-gray-600  line-clamp-3  font-sans">
+          {whyThisCourse}
+        </Typography>
+
+        <Button
+          onClick={handleClick}
+          className="mt-4 w-full bg-primary-600 text-white hover:bg-primary-500 hover:drop-shadow-md transition duration-300 ease-in-out rounded-full items-center text-center  "
+        >
+          Read More
+          <FaArrowRightLong className="text-sm ml-2 mb-[2px]" />
+        </Button>
       </Stack>
     </Box>
   );
 };
 
-export default CourseCard;
+export default BlogCard;

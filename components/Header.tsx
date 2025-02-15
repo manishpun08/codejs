@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <>
       <nav
-        className={`w-full fixed top-0 z-10 border-b transition-all duration-500 ease-in-out flex flex-col md:flex-row items-center align-middle justify-between px-4 lg:px-8 ${
+        className={`w-full fixed top-0 z-10 border-b border-secondary-50 transition-all duration-500 ease-in-out flex flex-col md:flex-row items-center align-middle justify-between px-4 lg:px-8 ${
           scrolled
             ? 'bg-secondary-700 shadow-md border-none py-2'
             : 'bg-secondary-300 py-3'

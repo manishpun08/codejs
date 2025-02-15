@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "slug": "mern",
+    "name": "MERN Stack",
+    "duration": "3 Months",
+    "image": "/images/MERN.jpg"
+  },
+  {
+    "id": 2,
+    "slug": "javascript",
+    "name": "JavaScript/TypeScript",
+    "duration": "20 Days",
+    "image": "/images/typescript-javascript.jpg"
+  },
+  {
+    "id": 4,
+    "slug": "react",
+    "name": "React/Next",
+    "duration": "1.5 months",
+    "image": "/images/react.jpg"
+  },
+  {
+    "id": 99,
+    "slug": "nest",
+    "name": "Nest js",
+    "duration": "1 month",
+    "image": "/images/nest.png"
+  }
+]

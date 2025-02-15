@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "slug": "mern",
+    "name": "MERN Stack",
+    "duration": "3 Months",
+    "shortDescription": "Learn the full MERN stack, mastering both front-end and back-end to build dynamic, full-stack applications.",
+    "image": "/images/MERN.jpg",
+    "whyThisCourse": "Learn the MERN stack to become a versatile full-stack developer."
+  },
+  {
+    "id": 2,
+    "slug": "javascript",
+    "name": "JavaScript/TypeScript",
+    "duration": "20 Days",
+    "shortDescription": "Master JavaScript and TypeScript to build scalable, interactive applications on both client and server sides.",
+    "image": "/images/typescript-javascript.jpg",
+    "whyThisCourse": "Improve your JavaScript skills to write cleaner, more efficient code."
+  },
+  {
+    "id": 4,
+    "slug": "react",
+    "name": "React/Next",
+    "duration": "1.5 months",
+    "shortDescription": "Master React and Next.js to build fast, scalable, and dynamic web applications with seamless server-side rendering and optimal performance.",
+    "image": "/images/react.jpg",
+    "whyThisCourse": "Master React Hooks to manage state and side effects efficiently."
+  }
+]

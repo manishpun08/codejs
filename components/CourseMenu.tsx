@@ -5,8 +5,12 @@ import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import MenuIcon from '@mui/icons-material/Menu';
 import { coursesList } from '@/constants/general.constant';
+import { FaArrowRightLong } from 'react-icons/fa6';
+import { useRouter } from 'next/navigation';
 
 const CourseMenu: React.FC = () => {
+  const router = useRouter();
+
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -47,10 +51,22 @@ const CourseMenu: React.FC = () => {
             component="a"
             href={course.link}
             className="w-[230px] hover:bg-primary-300 hover:text-white transition-all duration-300 ease-in-out"
+            onClick={handleHoverClose}
           >
             <div className="py-2 capitalize">{course.name}</div>
           </MenuItem>
         ))}
+        <div className="flex justify-center my-2">
+          <Button
+            onClick={() => {
+              router.push('/courses');
+              handleHoverClose();
+            }}
+            className="w-full py-2 md:py-3 md:px-5 md:w-auto rounded-xl bg-primary-600 hover:bg-primary-500 hover:drop-shadow-md transition duration-300 ease-in-out text-white"
+          >
+            All Course <FaArrowRightLong className="text-lg ml-2 mb-[2px]" />
+          </Button>
+        </div>
       </Menu>
     </div>
   );
